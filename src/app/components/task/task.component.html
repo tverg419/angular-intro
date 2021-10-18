@@ -3,7 +3,10 @@
         {{task.text}} 
         <fa-icon 
             [icon]='faTimes'
-            [ngStyle]="{'color': 'red'}"></fa-icon></h3>
+            [ngStyle]="{'color': 'red'}"
+            (click)="onDelete(task)"
+        ></fa-icon>
+    </h3>
     <p>Day: {{task.day}}</p>
 
 </div>

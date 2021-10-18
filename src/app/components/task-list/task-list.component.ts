@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Task } from '../../Task'
 import {TaskService} from'../../services/task.service';
+import { TasksData } from 'src/app/seed-tasks';
+// import { TasksData } from 'src/app/seed-tasks';
 
 @Component({
   selector: 'app-task-list',
@@ -21,12 +23,18 @@ export class TaskListComponent implements OnInit {
       this.tasks = data;
     })
   }
+
   deleteTask(task: Task): void {
     this.taskService
     .deleteTask(task)
     .subscribe(() => {
       this.tasks = this.tasks.filter(t => t.id !== task.id)
     })
+  }
+
+  toggleReminderTask(task: Task): void {
+    task.reminder = !task.reminder
+    this.taskService.updateTaskReminder(task).subscribe()
   }
 
 }

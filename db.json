@@ -10,13 +10,13 @@
       "id": 2,
       "text": "Job Hunt",
       "day": "Monday",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 3,
       "text": "Network",
       "day": "Monday",
-      "reminder": true
+      "reminder": false
     }
   ]
 }

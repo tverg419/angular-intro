@@ -1,3 +1,6 @@
+<app-add-task
+    (onAddTask)='postTask($event)'
+></app-add-task>
 <app-task 
     *ngFor='let task of tasks' 
     [task]='task'

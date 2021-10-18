@@ -17,6 +17,12 @@
       "text": "Network",
       "day": "Monday",
       "reminder": false
+    },
+    {
+      "id": 4,
+      "text": "sadf",
+      "day": "asdf",
+      "reminder": true
     }
   ]
 }
